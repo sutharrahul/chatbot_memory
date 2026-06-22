@@ -34,7 +34,8 @@ Ans : async function getData() {
 
 USER_MESSAGE = input("🦁 Ask somthing > ")
 
-history = chat_history.messages
+# last chat_history.messages[-20] messages only
+history = chat_history.messages[-20]
 
 
 messages = [("system", SYSTEAM_PROMPT)] + history + [("human", USER_MESSAGE)]
