@@ -1,6 +1,7 @@
 # 🧠 Chatbot Memory
 
 A terminal-based AI chatbot with persistent memory using LangChain, Ollama, and PostgreSQL. The chatbot remembers your conversation across sessions — close the terminal and come back later, it still knows who you are.
+I set the limit to 20 messages in the history for context so that LLM won't exceed its context window, but you can adjust this as needed. The chat history is stored in a PostgreSQL database and retrieved on each message to provide context-aware responses from the LLM.
 
 ## Features
 
