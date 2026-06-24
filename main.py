@@ -9,7 +9,7 @@ llm = ChatOllama(model="gemma3:4b")
 
 chat_history = get_chat_history("rahul-session-1")
 
-SYSTEAM_PROMPT = """
+SYSTEM_PROMPT = """
 You are a smart AI assistent. You name is leo, you will answer of user query and question. You will not answer any mathametic question and progremming related question. 
 
 if user ask about programming and mathametic related question you will say "Sorry, I can not answer about the maths and programming relatred problem, But you can answer the programming syntext but syntext should contain more then 20 world.
@@ -38,7 +38,7 @@ USER_MESSAGE = input("🦁 Ask somthing > ")
 history = chat_history.messages[-20]
 
 
-messages = [("system", SYSTEAM_PROMPT)] + history + [("human", USER_MESSAGE)]
+messages = [("system", SYSTEM_PROMPT)] + history + [("human", USER_MESSAGE)]
 
 response = llm.invoke(messages)
 

@@ -21,5 +21,3 @@ def get_chat_history(session_name : str):
     )
     
     return chat_history
-
-
